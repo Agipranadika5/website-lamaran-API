@@ -1,0 +1,106 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Membuat animasi gambar latar belakang */
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Mengatur posisi relative untuk body */
+    overflow: hidden; /* Menghilangkan scrollbar */
+    color: #fff; /* Warna teks */
+}
+
+/* Gambar latar belakang */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c') no-repeat center center fixed; /* Gambar latar belakang teknologi */
+    background-size: cover; /* Ukuran gambar latar belakang */
+    opacity: 0.8; /* Transparansi latar belakang */
+    z-index: 0; /* Di bawah semua elemen lainnya */
+}
+
+/* Main container */
+main {
+    position: relative;
+    z-index: 1; /* Menempatkan konten utama di atas gambar */
+    width: 100%;
+    max-width: 500px;
+    background: rgba(0, 0, 0, 0.7); /* Background transparan hitam */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px); /* Efek buram untuk latar belakang */
+}
+
+/* Title */
+main .title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+/* Form styles */
+main .form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main .form .field {
+    width: 100%;
+}
+
+main .form .field label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+main .form .field input,
+main .form .field textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+
+main .form .field input:focus,
+main .form .field textarea:focus {
+    border-color: #4e94e2; /* Warna border saat fokus */
+    outline: none; /* Menghilangkan outline default */
+}
+
+main .form .field textarea {
+    resize: none;
+    height: 100px;
+}
+
+main .form .field button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    background: #4e94e2; /* Warna latar belakang tombol */
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+main .form .field button:hover {
+    background: #3a7db6; /* Warna tombol saat hover */
+}
