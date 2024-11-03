@@ -36,7 +36,7 @@ form.onsubmit = (e) => {
   let text = 'Lamaran Kerja\n\n';
 
   for(const [key, val] of formData) {
-    text += `\n\n${key}:\n${val}`;
+    text += `\n\n${key} :\n${val}`;
   }
 
   text = text.replace('\n\n', '');
