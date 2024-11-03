@@ -4,7 +4,6 @@ const group_id = '-4585291807';
 const form = document.getElementById('form-telegram');
 
 const sendMessage = (text) => {
-  console.log("Mengirim pesan:", text); // Debug untuk memeriksa pesan
 
   fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
     method: "POST",
@@ -13,7 +12,7 @@ const sendMessage = (text) => {
     },
     body: JSON.stringify({
       "chat_id": group_id,
-      "text": text
+      "text": text,
     })
   }).then(res => {
     if(!res.ok) {
@@ -21,10 +20,10 @@ const sendMessage = (text) => {
     }
     return res.json();
   }).then(res => {
-    console.log("Respon Telegram:", res);
+    console.log(res);
     alert('Pesan Berhasil Terkirim');
   }).catch(err => {
-    console.log("Error:", err);
+    console.log(err);
     alert('Error: Gagal Mengirim Pesan');
   });
 }
@@ -34,15 +33,13 @@ form.onsubmit = (e) => {
 
   const formData = new FormData(form);
 
-  // Tambahkan judul Lamaran Kerja di awal pesan dengan format Markdown
-  let text = 'Lamaran Kerja\n\n';
+  let text = 'Lamaran Kerja';
 
-  for (const [key, val] of formData.entries()) {
+  for(const [key, val] of formData) {
     text += `\n\n${key}:\n${val}`;
   }
 
-  text = text.trim(); // Menghilangkan spasi berlebih di akhir pesan
+  text = text.replace('\n\n', '');
 
-  console.log("Teks yang akan dikirim dengan Markdown:", text); // Debugging untuk melihat pesan
   sendMessage(text);
 }
