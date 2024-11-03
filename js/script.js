@@ -13,6 +13,7 @@ const sendMessage = (text) => {
     body: JSON.stringify({
       "chat_id": group_id,
       "text": text,
+      "parse_mode": "Markdown"
     })
   }).then(res => {
     if(!res.ok) {
@@ -33,10 +34,10 @@ form.onsubmit = (e) => {
 
   const formData = new FormData(form);
 
-  let text = 'LAMARAN KERJA';
+   let text = '*Lamaran Kerja*\n\n';
 
-  for(const [key, val] of formData) {
-    text += `\n\n${key}:\n${val}`;
+  formData.forEach((val, key) => {
+    text += `*${key}:* ${val}\n\n`;
   }
 
   text = text.replace('\n\n', '');
