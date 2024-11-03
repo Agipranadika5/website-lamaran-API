@@ -1,0 +1,65 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box
+}
+html{
+    scroll-behavior:smooth
+}
+body{width:100%;
+    font-family:"Poppins",sans-serif;
+    background-color:#1b1b1b;
+    color:#dedede
+}
+input,textarea,button{
+    outline:none;
+    border:none
+}
+main{
+    width:100%;
+    padding:20px
+}
+main .title{
+    text-align:center;
+    margin-bottom:20px
+}
+main .form{
+    width:100%;
+    max-width:700px;
+    margin:0 auto;
+    background-color:#333;
+    border-radius:10px;
+    border:1px solid #ada283;
+    padding:20px
+}
+main .form .field{
+    width:100%;
+    margin-bottom:20px
+}
+main .form .field input,main .form .field textarea{
+    width:100%;
+    padding:10px;
+    border-radius:5px;
+    background-color:#ffffff30;
+    color:#dedede;
+    resize:none;
+    border:1px solid rgba(0,0,0,0);
+    font-family:"Poppins",sans-serif
+}
+main .form .field input:focus,main .form .field textarea:focus{
+    border:1px solid #ada283
+}
+main .form .field button{
+    width:100%;
+    padding:10px;
+    border-radius:5px;
+    background-color:#458f45;
+    color:#dedede;
+    font-weight:bold;
+    font-size:1em;
+    font-family:"Poppins",sans-serif;
+    cursor:pointer
+}
+main .form .field:last-child{
+    margin-bottom:0
+}

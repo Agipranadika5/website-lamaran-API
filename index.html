@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="google" content="notranslate" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <title>Formulir Bot Telegram</title>
+  </head>
+  <body>
+
+    <main>
+      <h1 class="title">Formulir Lamaran Kerja</h1>
+      <form action="https://api.telegram.com" class="form" id="form-telegram">
+
+        <div class="field">
+          <p><label for="Name">Nama Lengkap :</label></p>
+          <input type="text" name="Name" id="Name" autocomplete="off"/>
+        </div>
+
+        <div class="field">
+          <p><label for="Alamat">Alamat :</label></p>
+          <input type="text" name="Alamat" id="Alamat" autocomplete="off"/>
+        </div>
+
+        <div class="field">
+          <p><label for="Nomor">No HP :</label></p>
+          <input type="tel" name="Nomor" id="Nomor" autocomplete="off"/>
+        </div>
+
+        <div class="field">
+          <p><label for="Email">Email :</label></p>
+          <input type="email" name="Email" id="Email" autocomplete="off"/>
+        </div>
+
+        <div class="field">
+          <p><label for="Message">Pengalaman Kerja :</label></p>
+          <textarea name="Message" id="Message" autocomplete="off"></textarea>
+        </div>
+
+        <div class="field">
+          <button class="btn-submit">KIRIM</button>
+        </div>
+
+      </form>
+    </main>
+
+
+    <script type="module" src="./js/script.js"></script>
+  </body>
+</html>
