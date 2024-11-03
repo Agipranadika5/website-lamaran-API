@@ -34,13 +34,14 @@ form.onsubmit = (e) => {
 
   const formData = new FormData(form);
 
-   let text = '*Lamaran Kerja*\n\n';
+  // Tambahkan judul Lamaran Kerja di awal pesan
+  let text = '*Lamaran Kerja*\n\n';
 
   formData.forEach((val, key) => {
     text += `*${key}:* ${val}\n\n`;
-  }
+  });
 
-  text = text.replace('\n\n', '');
+  text = text.trim(); // Menghilangkan spasi berlebih di akhir pesan
 
   sendMessage(text);
 }
