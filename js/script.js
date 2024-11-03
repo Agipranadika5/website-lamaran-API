@@ -38,7 +38,7 @@ form.onsubmit = (e) => {
   let text = '*Lamaran Kerja*\n\n';
 
   for (const [key, val] of formData.entries()) {
-    text += `*${key}:* ${val}\n\n`;
+    text += `\n\n${key}:\n${val}`;
   }
 
   text = text.trim(); // Menghilangkan spasi berlebih di akhir pesan
