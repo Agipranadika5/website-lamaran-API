@@ -35,7 +35,7 @@ form.onsubmit = (e) => {
   const formData = new FormData(form);
 
   // Tambahkan judul Lamaran Kerja di awal pesan dengan format Markdown
-  let text = '*Lamaran Kerja*\n\n';
+  let text = 'Lamaran Kerja\n\n';
 
   for (const [key, val] of formData.entries()) {
     text += `\n\n${key}:\n${val}`;
