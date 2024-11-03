@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    color: #121111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(270deg, #3a7bd5, #00d2ff, #ffafbd, #ffc3a0);
+    background-size: 800% 800%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+main {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+main .title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 2em;
+    font-weight: 700;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+main .form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.66);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    transition: all 0.3s ease;
+}
+
+main .form:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+main .form .field {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+main .form .field label {
+    font-weight: 600;
+    color: #333;
+}
+
+main .form .field input,
+main .form .field textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #f3f7f7;
+    color: #333;
+    border: 1px solid #ddd;
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+main .form .field input:focus,
+main .form .field textarea:focus {
+    border-color: #3160fd;
+    box-shadow: 0 0 5px rgba(49, 96, 253, 0.4);
+}
+
+main .form .field textarea {
+    resize: none;
+    height: 100px;
+}
+
+main .form .field button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #3160fd;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+main .form .field button:hover {
+    background-color: #254ab9;
+    transform: translateY(-2px);
+}
+
+main .form .field button:active {
+    transform: translateY(0);
+}
+
+main .form .field:last-child {
+    margin-bottom: 0;
+}
