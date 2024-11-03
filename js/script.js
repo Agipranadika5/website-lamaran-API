@@ -33,7 +33,7 @@ form.onsubmit = (e) => {
 
   const formData = new FormData(form);
 
-  let text = '';
+  let text = 'LAMARAN KERJA';
 
   for(const [key, val] of formData) {
     text += `\n\n${key}:\n${val}`;
