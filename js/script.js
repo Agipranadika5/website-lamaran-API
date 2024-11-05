@@ -21,10 +21,10 @@ const sendMessage = (text) => {
     return res.json();
   }).then(res => {
     console.log(res);
-    alert('Pesan Berhasil Terkirim');
+    alert('Lamaran Anda Berhasil Terkirim');
   }).catch(err => {
     console.log(err);
-    alert('Error: Gagal Mengirim Pesan');
+    alert('Error: Gagal Mengirim Lamaran');
   });
 }
 
@@ -33,7 +33,7 @@ form.onsubmit = (e) => {
 
   const formData = new FormData(form);
 
-  let text = '~Lamaran Kerja~\n\n';
+  let text = '~~LAMARAN KERJA~~\n\n';
 
   for(const [key, val] of formData) {
     text += `\n\n${key} :\n${val}`;
